@@ -16,6 +16,7 @@ const formatDate = (value, format = "%B %d, %Y") => {
 };
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addFilter("date", formatDate);
 

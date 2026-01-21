@@ -56,7 +56,7 @@ title: Experience
           <p class="timeline-role">Voice-controlled browser extension for fast, language based web navigation.</p>
           <ul class="timeline-details">
             <li>LLM translates natural language commands into high-level action plans.</li>
-            <li>Lightweight, heuristic-based execution keeps interactions fast and reliable.</li>
+            <li>Lightweight, heuristic-based execution makes interactions very fast and intuitive.</li>
             <li>Blazing fast compared to compute-heavy tools like Claude in Chrome.</li>
           </ul>
           <div class="demo-grid" aria-label="Vocal Web demos">

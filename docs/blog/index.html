@@ -141,6 +141,100 @@ a:hover {
   color: var(--muted);
 }
 
+.experience {
+  margin-top: 56px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.timeline-card h3 {
+  margin-top: 0;
+}
+
+.timeline-list {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--line);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 24px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(31, 94, 90, 0.15);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.timeline-header h4 {
+  margin: 0;
+}
+
+.timeline-meta {
+  color: var(--accent-2);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-role {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.timeline-details {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 16px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .post-date {
   color: var(--accent-2);
   font-size: 0.85rem;
@@ -186,7 +280,7 @@ a:hover {
     <span class="tagline">Designer + developer building fast, focused products.</span>
   </div>
   <nav class="nav">
-    <a href="/experience/">Experience</a>
+    <a href="/portfolio/">Experience</a>
     <a href="/blog/">Blog</a>
     <a href="mailto:hello@example.com">Contact</a>
   </nav>

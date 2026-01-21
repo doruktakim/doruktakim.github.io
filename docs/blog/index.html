@@ -275,6 +275,32 @@ a:hover {
   font-size: 0.9rem;
 }
 
+.social-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
+}
+
 @media (max-width: 720px) {
   .site-header {
     flex-direction: column;
@@ -320,6 +346,7 @@ a:hover {
 
     </main>
     <footer class="footer">
+      
       <p>©  Doruk Takim. Built for speed.</p>
     </footer>
   </body>

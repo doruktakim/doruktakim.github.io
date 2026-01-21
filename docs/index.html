@@ -14,9 +14,7 @@
             document.documentElement.dataset.theme = stored;
             return;
           }
-          if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            document.documentElement.dataset.theme = "dark";
-          }
+          document.documentElement.dataset.theme = "dark";
         } catch (err) {
           // Ignore storage or media errors.
         }
@@ -311,6 +309,12 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   flex-wrap: wrap;
 }
 
+.timeline-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .timeline-header h4 {
   margin: 0;
 }
@@ -520,9 +524,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
           }
         })();
 
-        const prefersDark =
-          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const initialTheme = root.dataset.theme || stored || (prefersDark ? "dark" : "light");
+        const initialTheme = root.dataset.theme || stored || "dark";
 
         const applyTheme = (theme, persist) => {
           root.dataset.theme = theme;

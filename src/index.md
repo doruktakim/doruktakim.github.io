@@ -61,21 +61,18 @@ title: Home
         <li class="timeline-item">
           <div class="timeline-header">
             <h4>Velocity Commerce</h4>
-            <span class="timeline-meta">2024</span>
           </div>
           <p class="timeline-role">Performance-first ecommerce redesign.</p>
         </li>
         <li class="timeline-item">
           <div class="timeline-header">
             <h4>Signal Studio</h4>
-            <span class="timeline-meta">2023</span>
           </div>
           <p class="timeline-role">Brand system and landing experience.</p>
         </li>
         <li class="timeline-item">
           <div class="timeline-header">
             <h4>Atlas Dashboard</h4>
-            <span class="timeline-meta">2023</span>
           </div>
           <p class="timeline-role">Operations dashboard with zero-latency filters.</p>
         </li>

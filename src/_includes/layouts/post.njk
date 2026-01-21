@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <header>
+    <p class="post-date">{{ date | date("%B %d, %Y") }}</p>
+    <h1>{{ title }}</h1>
+    {% if summary %}<p class="post-summary">{{ summary }}</p>{% endif %}
+  </header>
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+</article>

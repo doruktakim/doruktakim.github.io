@@ -1,0 +1,35 @@
+# Portfolio + Blog (GitHub Pages)
+
+This is a tiny Eleventy (11ty) site built for speed. Content lives in `src/` and the static output goes to `docs/` for GitHub Pages.
+
+## Quick start
+
+```bash
+npm install
+npm run dev
+```
+
+## Build for GitHub Pages
+
+```bash
+npm run build
+```
+
+Commit the `docs/` folder and enable GitHub Pages:
+- Settings → Pages → Deploy from a branch
+- Branch: `main`, folder: `/docs`
+
+## Writing new posts
+
+Add a markdown file in `src/blog/posts/` with front matter:
+
+```md
+---
+layout: layouts/post.njk
+title: Your title
+summary: One sentence summary
+date: 2026-01-28
+tags: [post]
+---
+Your post here.
+```

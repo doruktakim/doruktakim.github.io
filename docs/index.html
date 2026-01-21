@@ -176,6 +176,10 @@ a:hover {
   background: var(--line);
 }
 
+.no-timeline::before {
+  display: none;
+}
+
 .timeline-item {
   position: relative;
   padding-left: 32px;
@@ -196,6 +200,14 @@ a:hover {
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 4px rgba(31, 94, 90, 0.15);
+}
+
+.no-timeline .timeline-item {
+  padding-left: 0;
+}
+
+.no-timeline .timeline-item::before {
+  display: none;
 }
 
 .timeline-header {
@@ -340,7 +352,7 @@ a:hover {
     </div>
     <div class="card timeline-card">
       <h3>Side projects</h3>
-      <ol class="timeline-list">
+      <ol class="timeline-list no-timeline">
         <li class="timeline-item">
           <div class="timeline-header">
             <h4>Velocity Commerce</h4>

@@ -36,7 +36,7 @@ title: Experience
     </div>
     <div class="card timeline-card">
       <h3>Side projects</h3>
-      <ol class="timeline-list">
+      <ol class="timeline-list no-timeline">
         <li class="timeline-item">
           <div class="timeline-header">
             <h4>Velocity Commerce</h4>

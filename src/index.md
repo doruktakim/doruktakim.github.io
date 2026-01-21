@@ -35,6 +35,13 @@ title: Home
       <ol class="timeline-list">
         <li class="timeline-item">
           <div class="timeline-header">
+            <h4>UCL</h4>
+            <span class="timeline-meta">2025-2028</span>
+          </div>
+          <p class="timeline-role">BSc (Hons) Computer Science</p>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-header">
             <h4>Robert College</h4>
             <span class="timeline-meta">2020-2025</span>
           </div>
@@ -45,13 +52,6 @@ title: Home
             <li>Relevant Coursework: Linear Algebra, Multivariable Calculus, Discrete Mathematics</li>
             <li>Ranked in the top 0.07% in Turkiye's National High School Entrance Examination</li>
           </ul>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-header">
-            <h4>UCL</h4>
-            <span class="timeline-meta">2025-2028</span>
-          </div>
-          <p class="timeline-role">BSc (Hons) Computer Science</p>
         </li>
       </ol>
     </div>

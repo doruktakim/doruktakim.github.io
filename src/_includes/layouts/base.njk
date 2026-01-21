@@ -14,9 +14,7 @@
             document.documentElement.dataset.theme = stored;
             return;
           }
-          if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            document.documentElement.dataset.theme = "dark";
-          }
+          document.documentElement.dataset.theme = "dark";
         } catch (err) {
           // Ignore storage or media errors.
         }
@@ -67,9 +65,7 @@
           }
         })();
 
-        const prefersDark =
-          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const initialTheme = root.dataset.theme || stored || (prefersDark ? "dark" : "light");
+        const initialTheme = root.dataset.theme || stored || "dark";
 
         const applyTheme = (theme, persist) => {
           root.dataset.theme = theme;

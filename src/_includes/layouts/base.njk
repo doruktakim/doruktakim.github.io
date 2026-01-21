@@ -13,7 +13,7 @@
   </head>
   <body>
     {% include "partials/nav.njk" %}
-    <main class="main{% if page.fileSlug == 'index' %} main-home{% endif %}">
+    <main class="main">
       {{ content | safe }}
     </main>
     <footer class="footer">

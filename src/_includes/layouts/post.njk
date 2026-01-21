@@ -6,8 +6,63 @@ layout: layouts/base.njk
     <p class="post-date">{{ date | date("%B %d, %Y") }}</p>
     <h1>{{ title }}</h1>
     {% if summary %}<p class="post-summary">{{ summary }}</p>{% endif %}
+    <div class="post-share">
+      <button class="button ghost share-button" type="button" data-share-button>
+        Copy link
+      </button>
+      <span class="share-feedback" role="status" aria-live="polite" aria-atomic="true" data-share-feedback></span>
+    </div>
   </header>
   <div class="post-body">
     {{ content | safe }}
   </div>
 </article>
+<script>
+  (() => {
+    const button = document.querySelector("[data-share-button]");
+    if (!button) return;
+
+    const feedback = document.querySelector("[data-share-feedback]");
+    let timeoutId;
+
+    const setFeedback = (message) => {
+      if (!feedback) return;
+      feedback.textContent = message;
+      if (!message) return;
+      clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(() => {
+        feedback.textContent = "";
+      }, 2000);
+    };
+
+    const fallbackCopy = (text) => {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.top = "-9999px";
+      field.style.left = "-9999px";
+      document.body.appendChild(field);
+      field.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(field);
+      return ok;
+    };
+
+    button.addEventListener("click", async () => {
+      const url = window.location.href;
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(url);
+          setFeedback("Link copied to clipboard");
+          return;
+        }
+        if (fallbackCopy(url)) {
+          setFeedback("Link copied to clipboard");
+        }
+      } catch (err) {
+        // Ignore clipboard errors silently for speed.
+      }
+    });
+  })();
+</script>

@@ -372,6 +372,25 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   margin-top: 0;
 }
 
+.post-share {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.share-button {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+.share-feedback {
+  min-height: 1em;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 .post-body {
   margin-top: 20px;
 }

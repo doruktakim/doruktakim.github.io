@@ -6,6 +6,22 @@
     <title>{% if title %}{{ title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ description or site.description }}" />
     <link rel="icon" href="/favicon.ico" />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          if (stored) {
+            document.documentElement.dataset.theme = stored;
+            return;
+          }
+          if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.documentElement.dataset.theme = "dark";
+          }
+        } catch (err) {
+          // Ignore storage or media errors.
+        }
+      })();
+    </script>
     <style>
       {% include "inline.css" %}
     </style>
@@ -37,5 +53,44 @@
       {% endif %}
       <p>© {{ "now" | date("%Y") }} {{ site.title }}. Built for speed.</p>
     </footer>
+    <script>
+      (() => {
+        const toggle = document.querySelector("[data-theme-toggle]");
+        if (!toggle) return;
+
+        const root = document.documentElement;
+        const stored = (() => {
+          try {
+            return localStorage.getItem("theme");
+          } catch (err) {
+            return null;
+          }
+        })();
+
+        const prefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const initialTheme = root.dataset.theme || stored || (prefersDark ? "dark" : "light");
+
+        const applyTheme = (theme, persist) => {
+          root.dataset.theme = theme;
+          if (persist) {
+            try {
+              localStorage.setItem("theme", theme);
+            } catch (err) {
+              // Ignore storage errors.
+            }
+          }
+          toggle.setAttribute("aria-pressed", theme === "dark");
+          toggle.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+        };
+
+        applyTheme(initialTheme, false);
+
+        toggle.addEventListener("click", () => {
+          const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+          applyTheme(nextTheme, true);
+        });
+      })();
+    </script>
   </body>
 </html>

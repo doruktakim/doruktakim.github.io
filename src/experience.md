@@ -61,8 +61,8 @@ title: Experience
                 <source data-src="/assets/demos/book_flight_demo.mp4" type="video/mp4" />
               </video>
               <figcaption class="demo-caption">
-                <span class="demo-label">Voice Input</span>
-                <p>&ldquo;Show me cheap flights from Istanbul to New York on January 30th.&rdquo;</p>
+                <span class="demo-label">Demo #1</span>
+                <p>Booking a flight ticket.</p>
               </figcaption>
             </figure>
             <figure class="demo-card">
@@ -79,7 +79,7 @@ title: Experience
                 <source data-src="/assets/demos/shopping_demo.mp4" type="video/mp4" />
               </video>
               <figcaption class="demo-caption">
-                <span class="demo-label">Voice Demo</span>
+                <span class="demo-label">Demo #2</span>
                 <p>Buying a speaker on eBay.</p>
               </figcaption>
             </figure>
@@ -97,8 +97,8 @@ title: Experience
                 <source data-src="/assets/demos/youtubePodcast.mp4" type="video/mp4" />
               </video>
               <figcaption class="demo-caption">
-                <span class="demo-label">Voice Input</span>
-                <p>&ldquo;I want to watch a Dwarkesh podcast video.&rdquo;</p>
+                <span class="demo-label">Demo #3</span>
+                <p>Opening a podcast on YouTube.</p>
               </figcaption>
             </figure>
             <figure class="demo-card">
@@ -115,8 +115,8 @@ title: Experience
                 <source data-src="/assets/demos/wikipediaSearch.mp4" type="video/mp4" />
               </video>
               <figcaption class="demo-caption">
-                <span class="demo-label">Text Input</span>
-                <p>&ldquo;Search for the Wikipedia article on The French Revolution.&rdquo;</p>
+                <span class="demo-label">Demo #4</span>
+                <p>Searching for a Wikipedia article.</p>
               </figcaption>
             </figure>
           </div>

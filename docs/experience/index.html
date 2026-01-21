@@ -333,6 +333,51 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   color: var(--muted);
 }
 
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.demo-card {
+  background: var(--bg-highlight);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.demo-video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  display: block;
+  aspect-ratio: 16 / 9;
+}
+
+.demo-caption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.demo-caption p {
+  margin: 4px 0 0;
+}
+
+.demo-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
 .text-link {
   display: inline-flex;
   margin-top: 16px;
@@ -469,11 +514,84 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
           </div>
           <p class="timeline-role">Voice-controlled browser extension for fast, natural language web navigation.</p>
           <ul class="timeline-details">
-            <li>Role: Product + Engineering</li>
             <li>LLM translates natural language commands into high-level action plans.</li>
-            <li>Lightweight, heuristic execution keeps interactions fast and reliable.</li>
+            <li>Lightweight, heuristic-based execution keeps interactions fast and reliable.</li>
             <li>Blazing fast vs compute-heavy tools like Claude in Chrome, with some performance tradeoffs.</li>
           </ul>
+          <div class="demo-grid" aria-label="Vocal Web demos">
+            <figure class="demo-card">
+              <video
+                class="demo-video"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/demos/book_flight_demo.jpg"
+                data-lazy="true"
+              >
+                <source data-src="/assets/demos/book_flight_demo.webm" type="video/webm" />
+                <source data-src="/assets/demos/book_flight_demo.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="demo-caption">
+                <span class="demo-label">Voice Input</span>
+                <p>&ldquo;Show me cheap flights from Istanbul to New York on January 30th.&rdquo;</p>
+              </figcaption>
+            </figure>
+            <figure class="demo-card">
+              <video
+                class="demo-video"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/demos/shopping_demo.jpg"
+                data-lazy="true"
+              >
+                <source data-src="/assets/demos/shopping_demo.webm" type="video/webm" />
+                <source data-src="/assets/demos/shopping_demo.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="demo-caption">
+                <span class="demo-label">Voice Demo</span>
+                <p>Buying a speaker on eBay.</p>
+              </figcaption>
+            </figure>
+            <figure class="demo-card">
+              <video
+                class="demo-video"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/demos/youtubePodcast.jpg"
+                data-lazy="true"
+              >
+                <source data-src="/assets/demos/youtubePodcast.webm" type="video/webm" />
+                <source data-src="/assets/demos/youtubePodcast.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="demo-caption">
+                <span class="demo-label">Voice Input</span>
+                <p>&ldquo;I want to watch a Dwarkesh podcast video.&rdquo;</p>
+              </figcaption>
+            </figure>
+            <figure class="demo-card">
+              <video
+                class="demo-video"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/demos/wikipediaSearch.jpg"
+                data-lazy="true"
+              >
+                <source data-src="/assets/demos/wikipediaSearch.webm" type="video/webm" />
+                <source data-src="/assets/demos/wikipediaSearch.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="demo-caption">
+                <span class="demo-label">Text Input</span>
+                <p>&ldquo;Search for the Wikipedia article on The French Revolution.&rdquo;</p>
+              </figcaption>
+            </figure>
+          </div>
         </li>
       </ol>
     </div>
@@ -525,6 +643,40 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
           const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
           applyTheme(nextTheme, true);
         });
+      })();
+    </script>
+    <script>
+      (() => {
+        const videos = document.querySelectorAll("video[data-lazy]");
+        if (!videos.length) return;
+
+        const loadVideo = (video) => {
+          if (video.dataset.loaded === "true") return;
+          const sources = video.querySelectorAll("source[data-src]");
+          sources.forEach((source) => {
+            source.src = source.dataset.src;
+            source.removeAttribute("data-src");
+          });
+          video.load();
+          video.dataset.loaded = "true";
+        };
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                loadVideo(entry.target);
+                observer.unobserve(entry.target);
+              });
+            },
+            { rootMargin: "200px" }
+          );
+
+          videos.forEach((video) => observer.observe(video));
+        } else {
+          videos.forEach(loadVideo);
+        }
       })();
     </script>
   </body>

@@ -42,11 +42,84 @@ title: Experience
           </div>
           <p class="timeline-role">Voice-controlled browser extension for fast, natural language web navigation.</p>
           <ul class="timeline-details">
-            <li>Role: Product + Engineering</li>
             <li>LLM translates natural language commands into high-level action plans.</li>
-            <li>Lightweight, heuristic execution keeps interactions fast and reliable.</li>
+            <li>Lightweight, heuristic-based execution keeps interactions fast and reliable.</li>
             <li>Blazing fast vs compute-heavy tools like Claude in Chrome, with some performance tradeoffs.</li>
           </ul>
+          <div class="demo-grid" aria-label="Vocal Web demos">
+            <figure class="demo-card">
+              <video
+                class="demo-video"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/demos/book_flight_demo.jpg"
+                data-lazy="true"
+              >
+                <source data-src="/assets/demos/book_flight_demo.webm" type="video/webm" />
+                <source data-src="/assets/demos/book_flight_demo.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="demo-caption">
+                <span class="demo-label">Voice Input</span>
+                <p>&ldquo;Show me cheap flights from Istanbul to New York on January 30th.&rdquo;</p>
+              </figcaption>
+            </figure>
+            <figure class="demo-card">
+              <video
+                class="demo-video"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/demos/shopping_demo.jpg"
+                data-lazy="true"
+              >
+                <source data-src="/assets/demos/shopping_demo.webm" type="video/webm" />
+                <source data-src="/assets/demos/shopping_demo.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="demo-caption">
+                <span class="demo-label">Voice Demo</span>
+                <p>Buying a speaker on eBay.</p>
+              </figcaption>
+            </figure>
+            <figure class="demo-card">
+              <video
+                class="demo-video"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/demos/youtubePodcast.jpg"
+                data-lazy="true"
+              >
+                <source data-src="/assets/demos/youtubePodcast.webm" type="video/webm" />
+                <source data-src="/assets/demos/youtubePodcast.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="demo-caption">
+                <span class="demo-label">Voice Input</span>
+                <p>&ldquo;I want to watch a Dwarkesh podcast video.&rdquo;</p>
+              </figcaption>
+            </figure>
+            <figure class="demo-card">
+              <video
+                class="demo-video"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="/assets/demos/wikipediaSearch.jpg"
+                data-lazy="true"
+              >
+                <source data-src="/assets/demos/wikipediaSearch.webm" type="video/webm" />
+                <source data-src="/assets/demos/wikipediaSearch.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="demo-caption">
+                <span class="demo-label">Text Input</span>
+                <p>&ldquo;Search for the Wikipedia article on The French Revolution.&rdquo;</p>
+              </figcaption>
+            </figure>
+          </div>
         </li>
       </ol>
     </div>

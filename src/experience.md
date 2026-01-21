@@ -38,22 +38,20 @@ title: Experience
       <ol class="timeline-list no-timeline">
         <li class="timeline-item">
           <div class="timeline-header">
-            <div class="timeline-title">
-              <h4>Vocal Web</h4>
-              <a
-                class="social-link"
-                href="https://github.com/doruktakim/vocal-web"
-                aria-label="Vocal Web on GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                  <path
-                    d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.38-3.37-1.38-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.52 1.05 1.52 1.05.9 1.56 2.36 1.11 2.93.85.09-.67.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.32.1-2.74 0 0 .85-.28 2.79 1.05.81-.23 1.68-.34 2.54-.34.86 0 1.73.12 2.54.34 1.94-1.33 2.79-1.05 2.79-1.05.55 1.42.2 2.48.1 2.74.64.72 1.02 1.64 1.02 2.76 0 3.96-2.35 4.82-4.58 5.08.36.32.69.93.69 1.88 0 1.36-.01 2.46-.01 2.79 0 .26.18.59.69.48A10.02 10.02 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z"
-                  />
-                </svg>
-              </a>
-            </div>
+            <h4>Vocal Web</h4>
+            <a
+              class="social-link"
+              href="https://github.com/doruktakim/vocal-web"
+              aria-label="Vocal Web on GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.38-3.37-1.38-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.52 1.05 1.52 1.05.9 1.56 2.36 1.11 2.93.85.09-.67.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.32.1-2.74 0 0 .85-.28 2.79 1.05.81-.23 1.68-.34 2.54-.34.86 0 1.73.12 2.54.34 1.94-1.33 2.79-1.05 2.79-1.05.55 1.42.2 2.48.1 2.74.64.72 1.02 1.64 1.02 2.76 0 3.96-2.35 4.82-4.58 5.08.36.32.69.93.69 1.88 0 1.36-.01 2.46-.01 2.79 0 .26.18.59.69.48A10.02 10.02 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z"
+                />
+              </svg>
+            </a>
           </div>
           <p class="timeline-role">Voice-controlled browser extension for fast, natural language web navigation.</p>
           <ul class="timeline-details">

@@ -10,16 +10,3 @@ title: Home
     <a class="button ghost" href="/blog/">Read the blog</a>
   </div>
 </section>
-
-<section class="grid">
-  <div class="card">
-    <h2>Selected work</h2>
-    <p>Product, web, and system projects with a bias toward clarity and speed.</p>
-    <a href="/experience/">Explore experience →</a>
-  </div>
-  <div class="card">
-    <h2>Writing</h2>
-    <p>Weekly notes on design, engineering, and building for performance.</p>
-    <a href="/blog/">See the latest posts →</a>
-  </div>
-</section>

@@ -38,35 +38,14 @@ title: Experience
       <ol class="timeline-list no-timeline">
         <li class="timeline-item">
           <div class="timeline-header">
-            <h4>Velocity Commerce</h4>
+            <h4>Vocal Web</h4>
           </div>
-          <p class="timeline-role">Performance-first ecommerce redesign focused on faster navigation.</p>
+          <p class="timeline-role">Voice-controlled browser extension for fast, natural language web navigation.</p>
           <ul class="timeline-details">
-            <li>Role: Product + Frontend</li>
-            <li>Outcome: 40% faster page loads</li>
-            <li>Stack: HTML, CSS, minimal JS</li>
-          </ul>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-header">
-            <h4>Signal Studio</h4>
-          </div>
-          <p class="timeline-role">Brand system and landing experience for a studio collective.</p>
-          <ul class="timeline-details">
-            <li>Role: Design lead</li>
-            <li>Outcome: +3x inbound leads</li>
-            <li>Stack: Static site + CMS</li>
-          </ul>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-header">
-            <h4>Atlas Dashboard</h4>
-          </div>
-          <p class="timeline-role">Operations dashboard with high-density data views.</p>
-          <ul class="timeline-details">
-            <li>Role: UX + UI</li>
-            <li>Outcome: 25% faster task completion</li>
-            <li>Stack: React + edge cache</li>
+            <li>Role: Product + Engineering</li>
+            <li>LLM translates natural language commands into high-level action plans.</li>
+            <li>Lightweight, heuristic execution keeps interactions fast and reliable.</li>
+            <li>Blazing fast vs compute-heavy tools like Claude in Chrome, with some performance tradeoffs.</li>
           </ul>
         </li>
       </ol>

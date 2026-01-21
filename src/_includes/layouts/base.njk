@@ -81,7 +81,10 @@
             }
           }
           toggle.setAttribute("aria-pressed", theme === "dark");
-          toggle.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+          toggle.setAttribute(
+            "aria-label",
+            theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+          );
         };
 
         applyTheme(initialTheme, false);

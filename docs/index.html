@@ -110,26 +110,52 @@ a:hover {
 }
 
 .theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--card);
   color: var(--ink);
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
 .theme-toggle:hover {
   border-color: var(--accent);
   color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .theme-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+.theme-toggle__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle__icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
+}
+
+html[data-theme="dark"] .theme-toggle__icon[data-icon="moon"] {
+  display: none;
+}
+
+html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
+  display: none;
 }
 
 .main {
@@ -386,7 +412,22 @@ a:hover {
     <a href="/experience/">Experience</a>
     <a href="/blog/">Blog</a>
     <a href="mailto:hello@example.com">Contact</a>
-    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
+      <span class="theme-toggle__icon" data-icon="moon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false">
+          <path
+            d="M13.5 3.5c-4.14 0-7.5 3.36-7.5 7.5s3.36 7.5 7.5 7.5c2.6 0 4.9-1.32 6.27-3.33-4.26 1.06-8.27-2.18-8.27-6.67 0-2.05.88-3.9 2.3-5.17-.1-.02-.2-.03-.3-.03Z"
+          />
+        </svg>
+      </span>
+      <span class="theme-toggle__icon" data-icon="sun" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false">
+          <path
+            d="M12 4.5a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1V6a1 1 0 0 1-2 0V4.5ZM12 18a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1V19.5a1 1 0 0 1-2 0V18ZM4.5 11a1 1 0 0 1 1-1H7a1 1 0 0 1 0 2H5.5a1 1 0 0 1-1-1ZM17 11a1 1 0 0 1 1-1h1.5a1 1 0 0 1 0 2H18a1 1 0 0 1-1-1Zm-1.44-4.06a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 1 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 0-1.41ZM6.97 16.97a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 1 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 0-1.41ZM6.97 6.97a1 1 0 0 1 0 1.41L5.91 9.44A1 1 0 1 1 4.5 8.03l1.06-1.06a1 1 0 0 1 1.41 0ZM16.56 15.56a1 1 0 0 1 0 1.41l-1.06 1.06a1 1 0 1 1-1.41-1.41l1.06-1.06a1 1 0 0 1 1.41 0ZM12 8.25A3.75 3.75 0 1 0 12 15.75 3.75 3.75 0 0 0 12 8.25Z"
+          />
+        </svg>
+      </span>
+    </button>
   </nav>
 </header>
 
@@ -450,7 +491,10 @@ a:hover {
             }
           }
           toggle.setAttribute("aria-pressed", theme === "dark");
-          toggle.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+          toggle.setAttribute(
+            "aria-label",
+            theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+          );
         };
 
         applyTheme(initialTheme, false);

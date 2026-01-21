@@ -55,7 +55,7 @@ title: Experience
                 webkit-playsinline
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
-                preload="metadata"
+                preload="none"
                 poster="/assets/demos/book_flight_demo.jpg"
                 data-lazy="true"
               >
@@ -75,7 +75,7 @@ title: Experience
                 webkit-playsinline
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
-                preload="metadata"
+                preload="none"
                 poster="/assets/demos/shopping_demo.jpg"
                 data-lazy="true"
               >
@@ -95,7 +95,7 @@ title: Experience
                 webkit-playsinline
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
-                preload="metadata"
+                preload="none"
                 poster="/assets/demos/youtubePodcast.jpg"
                 data-lazy="true"
               >
@@ -115,7 +115,7 @@ title: Experience
                 webkit-playsinline
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
-                preload="metadata"
+                preload="none"
                 poster="/assets/demos/wikipediaSearch.jpg"
                 data-lazy="true"
               >

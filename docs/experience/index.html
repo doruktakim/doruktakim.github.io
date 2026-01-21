@@ -527,7 +527,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
                 webkit-playsinline
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
-                preload="metadata"
+                preload="none"
                 poster="/assets/demos/book_flight_demo.jpg"
                 data-lazy="true"
               >
@@ -547,7 +547,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
                 webkit-playsinline
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
-                preload="metadata"
+                preload="none"
                 poster="/assets/demos/shopping_demo.jpg"
                 data-lazy="true"
               >
@@ -567,7 +567,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
                 webkit-playsinline
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
-                preload="metadata"
+                preload="none"
                 poster="/assets/demos/youtubePodcast.jpg"
                 data-lazy="true"
               >
@@ -587,7 +587,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
                 webkit-playsinline
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
-                preload="metadata"
+                preload="none"
                 poster="/assets/demos/wikipediaSearch.jpg"
                 data-lazy="true"
               >
@@ -669,22 +669,19 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
           video.dataset.loaded = "true";
         };
 
-        if ("IntersectionObserver" in window) {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                loadVideo(entry.target);
-                observer.unobserve(entry.target);
+        videos.forEach((video) => {
+          const activate = () => {
+            loadVideo(video);
+            if (video.paused) {
+              video.play().catch(() => {
+                // Ignore autoplay prevention.
               });
-            },
-            { rootMargin: "200px" }
-          );
+            }
+          };
 
-          videos.forEach((video) => observer.observe(video));
-        } else {
-          videos.forEach(loadVideo);
-        }
+          video.addEventListener("click", activate, { once: true });
+          video.addEventListener("play", () => loadVideo(video), { once: true });
+        });
       })();
     </script>
   </body>

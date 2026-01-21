@@ -51,8 +51,10 @@ title: Experience
               <video
                 class="demo-video"
                 controls
-                muted
                 playsinline
+                webkit-playsinline
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture
                 preload="metadata"
                 poster="/assets/demos/book_flight_demo.jpg"
                 data-lazy="true"
@@ -69,8 +71,10 @@ title: Experience
               <video
                 class="demo-video"
                 controls
-                muted
                 playsinline
+                webkit-playsinline
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture
                 preload="metadata"
                 poster="/assets/demos/shopping_demo.jpg"
                 data-lazy="true"
@@ -87,8 +91,10 @@ title: Experience
               <video
                 class="demo-video"
                 controls
-                muted
                 playsinline
+                webkit-playsinline
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture
                 preload="metadata"
                 poster="/assets/demos/youtubePodcast.jpg"
                 data-lazy="true"
@@ -105,8 +111,10 @@ title: Experience
               <video
                 class="demo-video"
                 controls
-                muted
                 playsinline
+                webkit-playsinline
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture
                 preload="metadata"
                 poster="/assets/demos/wikipediaSearch.jpg"
                 data-lazy="true"

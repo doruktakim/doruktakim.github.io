@@ -4,7 +4,6 @@ title: Experience
 ---
 <section class="page">
   <h1>Experience</h1>
-  <p class="lead">Education and side projects shaped into a clear timeline.</p>
 </section>
 
 <section class="experience">

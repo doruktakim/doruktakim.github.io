@@ -11,7 +11,7 @@
     </style>
     <link rel="icon" href="/favicon.ico" />
   </head>
-  <body>
+  <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
     {% include "partials/nav.njk" %}
     <main class="main">
       {{ content | safe }}

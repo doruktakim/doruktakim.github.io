@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Home
+bodyClass: page-fill
 ---
 <section class="hero">
   <h1>Hi, I'm Doruk.</h1>

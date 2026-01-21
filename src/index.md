@@ -6,7 +6,7 @@ title: Home
   <h1>Hi, I'm Doruk.</h1>
   <p class="lead">I design and build fast, focused products. This site is intentionally minimal so everything feels instantaneous.</p>
   <div class="cta">
-    <a class="button" href="/portfolio/">View experience</a>
+    <a class="button" href="/experience/">View experience</a>
     <a class="button ghost" href="/blog/">Read the blog</a>
   </div>
 </section>
@@ -15,7 +15,7 @@ title: Home
   <div class="card">
     <h2>Selected work</h2>
     <p>Product, web, and system projects with a bias toward clarity and speed.</p>
-    <a href="/portfolio/">Explore experience →</a>
+    <a href="/experience/">Explore experience →</a>
   </div>
   <div class="card">
     <h2>Writing</h2>
@@ -80,7 +80,7 @@ title: Home
           <p class="timeline-role">Operations dashboard with zero-latency filters.</p>
         </li>
       </ol>
-      <a class="text-link" href="/portfolio/">See full experience →</a>
+      <a class="text-link" href="/experience/">See full experience →</a>
     </div>
   </div>
 </section>

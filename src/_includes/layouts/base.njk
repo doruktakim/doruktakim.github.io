@@ -6,7 +6,9 @@
     <title>{% if title %}{{ title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ description or site.description }}" />
     <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/assets/style.css" />
+    <style>
+      {% include "inline.css" %}
+    </style>
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body>

@@ -110,6 +110,9 @@ a:hover {
   width: 1.15rem;
   height: 1.15rem;
   display: inline-block;
+  opacity: 0.7;
+  filter: saturate(0.8) contrast(0.9);
+  transition: opacity 0.2s ease, filter 0.2s ease;
 }
 
 .nav {
@@ -531,7 +534,9 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   <body>
     <header class="site-header">
   <div class="brand">
-    <a href="/"><img class="brand-icon" src="/assets/dog.svg" alt="" aria-hidden="true" decoding="async" />Doruk Takim</a>
+    <a href="/" aria-label="Home">
+      <img class="brand-icon" src="/assets/home-outline-rounded.svg" alt="Home">
+    </a>
   </div>
   <nav class="nav">
     <a href="/experience/">Experience</a>

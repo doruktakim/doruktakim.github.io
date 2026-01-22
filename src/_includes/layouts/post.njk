@@ -5,12 +5,10 @@ layout: layouts/base.njk
 {% set otherLang = "tr" %}
 {% set shareLabel = "Copy link" %}
 {% set shareSuccess = "Link copied to clipboard" %}
-{% set translationLabel = "Turkce oku ->" %}
 {% if pageLang == "tr" %}
   {% set otherLang = "en" %}
   {% set shareLabel = "Baglantiyi kopyala" %}
   {% set shareSuccess = "Baglanti kopyalandi" %}
-  {% set translationLabel = "Read in English ->" %}
 {% endif %}
 {% set translation = collections.post | translationFor(translationKey, otherLang) %}
 <article class="post">
@@ -18,7 +16,18 @@ layout: layouts/base.njk
     <div class="post-meta">
       <p class="post-date">{{ date | dateLocale(pageLang) }}</p>
       {% if translation %}
-        <a class="post-lang" href="{{ translation.url }}">{{ translationLabel }}</a>
+        <label class="lang-select post-lang-select" for="post-lang">
+          <span class="sr-only">Language</span>
+          <select id="post-lang" name="lang" onchange="window.location.href=this.value">
+            {% if pageLang == "tr" %}
+              <option value="{{ translation.url }}">En</option>
+              <option value="{{ page.url }}" selected>Tr</option>
+            {% else %}
+              <option value="{{ page.url }}" selected>En</option>
+              <option value="{{ translation.url }}">Tr</option>
+            {% endif %}
+          </select>
+        </label>
       {% endif %}
     </div>
     <h1>{{ title }}</h1>

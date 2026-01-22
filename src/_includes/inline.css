@@ -454,17 +454,6 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   margin: 0;
 }
 
-.post-lang {
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.post-lang:hover {
-  text-decoration: underline;
-}
-
 .post h1 {
   margin-top: 0;
   line-height: 1.15;

@@ -8,8 +8,12 @@
     <meta property="og:title" content="Studying CS with Codex by My Side · Doruk Takim" />
     <meta property="og:description" content="Portfolio and writing by Doruk Takim." />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Doruk Takim" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://doruktakim.github.io/blog/posts/cs-with-codex/" />
     <meta property="og:image" content="https://doruktakim.github.io/og-image.jpg" />
+    <meta property="og:image:url" content="https://doruktakim.github.io/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://doruktakim.github.io/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -422,6 +426,30 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   margin: 0 0 8px;
 }
 
+.post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 8px;
+}
+
+.post-meta .post-date {
+  margin: 0;
+}
+
+.post-lang {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-lang:hover {
+  text-decoration: underline;
+}
+
 .post h1 {
   margin-top: 0;
   line-height: 1.15;
@@ -580,9 +608,19 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
 </header>
 
     <main class="main">
-      <article class="post">
+      
+
+
+
+
+
+
+<article class="post">
   <header>
-    <p class="post-date">January 21, 2026</p>
+    <div class="post-meta">
+      <p class="post-date">January 21, 2026</p>
+      
+    </div>
     <h1>Studying CS with Codex by My Side</h1>
     <div class="post-summary-row">
       <p class="post-summary">A reflection on how coding agents are changing the way I think about my degree.</p>
@@ -594,7 +632,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
         </svg>
       </button>
     </div>
-    <span class="share-feedback" role="status" aria-live="polite" aria-atomic="true" data-share-feedback></span>
+    <span class="share-feedback" role="status" aria-live="polite" aria-atomic="true" data-share-feedback data-share-success="Link copied to clipboard"></span>
   </header>
   <div class="post-body">
     <p>I feel like we are living in one of the best times in human history to be alive. It seems that we will have the unique opportunity to (hopefully) see the exponential growth of scientific discovery, learn about what we are as humans, and explore the unknowns of the universe. This also means that the value of human intelligence, which was not only one of the biggest factors in a person’s career trajectory but also their “social worth” is going to plummet. As LLMs get significantly better every few months, it feels like everything is moving much faster than I had ever imagined.</p>
@@ -639,16 +677,19 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
       return ok;
     };
 
+    const successMessage =
+      (feedback && feedback.dataset.shareSuccess) || "Link copied to clipboard";
+
     button.addEventListener("click", async () => {
       const url = window.location.href;
       try {
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(url);
-          setFeedback("Link copied to clipboard");
+          setFeedback(successMessage);
           return;
         }
         if (fallbackCopy(url)) {
-          setFeedback("Link copied to clipboard");
+          setFeedback(successMessage);
         }
       } catch (err) {
         // Ignore clipboard errors silently for speed.

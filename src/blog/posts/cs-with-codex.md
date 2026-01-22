@@ -3,6 +3,8 @@ layout: layouts/post.njk
 title: Studying CS with Codex by My Side
 summary: A reflection on how coding agents are changing the way I think about my degree. 
 date: 2026-01-21
+lang: en
+translationKey: cs-with-codex
 tags: [post]
 ---
 I feel like we are living in one of the best times in human history to be alive. It seems that we will have the unique opportunity to (hopefully) see the exponential growth of scientific discovery, learn about what we are as humans, and explore the unknowns of the universe. This also means that the value of human intelligence, which was not only one of the biggest factors in a person’s career trajectory but also their “social worth” is going to plummet. As LLMs get significantly better every few months, it feels like everything is moving much faster than I had ever imagined.
@@ -18,4 +20,3 @@ Enter the dichotomy: the vast majority of my courses, as you'd expect, are simpl
 So I set myself a simple rule: I write the vast majority of my coursework code by hand, and use coding agents religiously for side projects. This is based on the idea that I will be best suited if I know both what the agent is doing and how to get the most out of these incredibly powerful tools. Even this is starting to lose meaning to me. My professor is talking about the work being done for these agents to target runtime systems and bytecode to heavily optimize performance in the near future, while teaching us the incredible Java Virtual Machine. I feel like the skills I'm learning will not be relevant in a few years, and I'm not sure if they'll even be called skills.
 
 So what do I do? I have no idea. I am worried about unemployment and my future, but the idea that I might be wasting my time on irrelevant skills is a whole lot more frightening to me. I love Codex because it gave me skills that would have taken years, and I can now turn my imagination into reality. I also hate Codex because I don't have the slightest clue what I am doing with my time learning how to write good code.
-

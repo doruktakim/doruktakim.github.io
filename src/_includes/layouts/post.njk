@@ -1,13 +1,30 @@
 ---
 layout: layouts/base.njk
 ---
+{% set pageLang = lang or "en" %}
+{% set otherLang = "tr" %}
+{% set shareLabel = "Copy link" %}
+{% set shareSuccess = "Link copied to clipboard" %}
+{% set translationLabel = "Turkce oku ->" %}
+{% if pageLang == "tr" %}
+  {% set otherLang = "en" %}
+  {% set shareLabel = "Baglantiyi kopyala" %}
+  {% set shareSuccess = "Baglanti kopyalandi" %}
+  {% set translationLabel = "Read in English ->" %}
+{% endif %}
+{% set translation = collections.post | translationFor(translationKey, otherLang) %}
 <article class="post">
   <header>
-    <p class="post-date">{{ date | date("%B %d, %Y") }}</p>
+    <div class="post-meta">
+      <p class="post-date">{{ date | dateLocale(pageLang) }}</p>
+      {% if translation %}
+        <a class="post-lang" href="{{ translation.url }}">{{ translationLabel }}</a>
+      {% endif %}
+    </div>
     <h1>{{ title }}</h1>
     <div class="post-summary-row">
       {% if summary %}<p class="post-summary">{{ summary }}</p>{% endif %}
-      <button class="share-button" type="button" data-share-button aria-label="Copy link" title="Copy link">
+      <button class="share-button" type="button" data-share-button aria-label="{{ shareLabel }}" title="{{ shareLabel }}">
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
           <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7" />
           <path d="M16 6l-4-4-4 4" />
@@ -15,7 +32,7 @@ layout: layouts/base.njk
         </svg>
       </button>
     </div>
-    <span class="share-feedback" role="status" aria-live="polite" aria-atomic="true" data-share-feedback></span>
+    <span class="share-feedback" role="status" aria-live="polite" aria-atomic="true" data-share-feedback data-share-success="{{ shareSuccess }}"></span>
   </header>
   <div class="post-body">
     {{ content | safe }}
@@ -53,16 +70,19 @@ layout: layouts/base.njk
       return ok;
     };
 
+    const successMessage =
+      (feedback && feedback.dataset.shareSuccess) || "Link copied to clipboard";
+
     button.addEventListener("click", async () => {
       const url = window.location.href;
       try {
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(url);
-          setFeedback("Link copied to clipboard");
+          setFeedback(successMessage);
           return;
         }
         if (fallbackCopy(url)) {
-          setFeedback("Link copied to clipboard");
+          setFeedback(successMessage);
         }
       } catch (err) {
         // Ignore clipboard errors silently for speed.

@@ -8,8 +8,12 @@
     <meta property="og:title" content="Home · Doruk Takim" />
     <meta property="og:description" content="Portfolio and writing by Doruk Takim." />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Doruk Takim" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://doruktakim.github.io/" />
     <meta property="og:image" content="https://doruktakim.github.io/og-image.jpg" />
+    <meta property="og:image:url" content="https://doruktakim.github.io/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://doruktakim.github.io/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -420,6 +424,30 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0 0 8px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 8px;
+}
+
+.post-meta .post-date {
+  margin: 0;
+}
+
+.post-lang {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-lang:hover {
+  text-decoration: underline;
 }
 
 .post h1 {

@@ -53,7 +53,7 @@ title: Experience
               </svg>
             </a>
           </div>
-          <p class="timeline-role">Voice-controlled browser extension for fast, language based web navigation.</p>
+          <p class="timeline-role">a Voice Controlled Browser Extension that allows users to navigate and interact with the web using natural language.</p>
           <ul class="timeline-details">
             <li>LLM translates natural language commands into high-level action plans.</li>
             <li>Lightweight, heuristic-based execution makes interactions very fast and intuitive.</li>

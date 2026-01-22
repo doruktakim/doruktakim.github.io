@@ -14,7 +14,7 @@
             document.documentElement.dataset.theme = stored;
             return;
           }
-          document.documentElement.dataset.theme = "dark";
+          document.documentElement.dataset.theme = "light";
         } catch (err) {
           // Ignore storage or media errors.
         }
@@ -65,7 +65,7 @@
           }
         })();
 
-        const initialTheme = root.dataset.theme || stored || "dark";
+        const initialTheme = root.dataset.theme || stored || "light";
 
         const applyTheme = (theme, persist) => {
           root.dataset.theme = theme;

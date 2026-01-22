@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home · Doruk Takim</title>
     <meta name="description" content="" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <script>
       (() => {
@@ -95,9 +99,17 @@ a:hover {
 }
 
 .brand a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+.brand-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: inline-block;
 }
 
 .nav {
@@ -171,13 +183,6 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   font-size: clamp(2.6rem, 5vw, 4.2rem);
   margin-bottom: 12px;
   line-height: 1.05;
-}
-.hero-title-icon {
-  display: inline-block;
-  width: 0.95em;
-  height: 0.95em;
-  margin-left: 0.2em;
-  vertical-align: -0.08em;
 }
 
 .lead {
@@ -526,7 +531,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   <body>
     <header class="site-header">
   <div class="brand">
-    <a href="/">Doruk Takim</a>
+    <a href="/"><img class="brand-icon" src="/assets/dog.svg" alt="" aria-hidden="true" decoding="async" />Doruk Takim</a>
   </div>
   <nav class="nav">
     <a href="/experience/">Experience</a>
@@ -550,7 +555,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
 
     <main class="main">
       <section class="hero">
-  <h1>Hi, I'm Doruk.<img class="hero-title-icon" src="/assets/dog.svg" alt="" aria-hidden="true" decoding="async" /></h1>
+  <h1>Hi, I'm Doruk.</h1>
   <p class="lead">This is where I share my thoughts and what I build.</p>
   <div class="cta">
     <a class="button" href="/blog/">Read the blog</a>

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Studying CS with Codex by My Side · Doruk Takim</title>
     <meta name="description" content="" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <script>
       (() => {
@@ -95,9 +99,17 @@ a:hover {
 }
 
 .brand a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+.brand-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: inline-block;
 }
 
 .nav {
@@ -519,7 +531,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   <body>
     <header class="site-header">
   <div class="brand">
-    <a href="/">Doruk Takim</a>
+    <a href="/"><img class="brand-icon" src="/assets/dog.svg" alt="" aria-hidden="true" decoding="async" />Doruk Takim</a>
   </div>
   <nav class="nav">
     <a href="/experience/">Experience</a>

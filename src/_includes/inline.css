@@ -370,18 +370,23 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
 
 .post h1 {
   margin-top: 0;
+  line-height: 1.15;
 }
 
 .post-summary-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 8px;
 }
 
 .post-summary {
   margin: 0;
+  max-width: 56ch;
+  font-size: 1.05rem;
+  color: var(--muted);
 }
 
 .share-button {
@@ -416,7 +421,29 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
 }
 
 .post-body {
-  margin-top: 20px;
+  margin-top: 24px;
+  max-width: 68ch;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.post header,
+.post-body {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post header {
+  max-width: 68ch;
+}
+
+.post-body p {
+  margin: 0 0 1.2em;
+}
+
+.post-body p:last-child {
+  margin-bottom: 0;
 }
 
 .footer {

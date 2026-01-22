@@ -14,7 +14,7 @@
             document.documentElement.dataset.theme = stored;
             return;
           }
-          document.documentElement.dataset.theme = "dark";
+          document.documentElement.dataset.theme = "light";
         } catch (err) {
           // Ignore storage or media errors.
         }
@@ -393,18 +393,23 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
 
 .post h1 {
   margin-top: 0;
+  line-height: 1.15;
 }
 
 .post-summary-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 8px;
 }
 
 .post-summary {
   margin: 0;
+  max-width: 56ch;
+  font-size: 1.05rem;
+  color: var(--muted);
 }
 
 .share-button {
@@ -439,7 +444,29 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
 }
 
 .post-body {
-  margin-top: 20px;
+  margin-top: 24px;
+  max-width: 68ch;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.post header,
+.post-body {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post header {
+  max-width: 68ch;
+}
+
+.post-body p {
+  margin: 0 0 1.2em;
+}
+
+.post-body p:last-child {
+  margin-bottom: 0;
 }
 
 .footer {
@@ -498,7 +525,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   <nav class="nav">
     <a href="/experience/">Experience</a>
     <a href="/blog/">Blog</a>
-    <a href="mailto:hello@example.com">Contact</a>
+    <a href="mailto:doruk.takim.25@ucl.ac.uk">Contact</a>
     <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
       <span class="theme-toggle__icon" data-icon="moon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" focusable="false">
@@ -518,7 +545,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
     <main class="main">
       <section class="hero">
   <h1>Hi, I'm Doruk.</h1>
-  <p class="lead">I’m a CS student navigating a time of rapid change. This is where I share my thoughts and what I build.</p>
+  <p class="lead">This is where I share my thoughts and what I build.</p>
   <div class="cta">
     <a class="button" href="/blog/">Read the blog</a>
     <a class="button ghost" href="/experience/">View experience</a>
@@ -561,7 +588,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
           }
         })();
 
-        const initialTheme = root.dataset.theme || stored || "dark";
+        const initialTheme = root.dataset.theme || stored || "light";
 
         const applyTheme = (theme, persist) => {
           root.dataset.theme = theme;

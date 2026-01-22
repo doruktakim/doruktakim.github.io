@@ -14,7 +14,7 @@
             document.documentElement.dataset.theme = stored;
             return;
           }
-          document.documentElement.dataset.theme = "dark";
+          document.documentElement.dataset.theme = "light";
         } catch (err) {
           // Ignore storage or media errors.
         }
@@ -393,18 +393,23 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
 
 .post h1 {
   margin-top: 0;
+  line-height: 1.15;
 }
 
 .post-summary-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 8px;
 }
 
 .post-summary {
   margin: 0;
+  max-width: 56ch;
+  font-size: 1.05rem;
+  color: var(--muted);
 }
 
 .share-button {
@@ -439,7 +444,29 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
 }
 
 .post-body {
-  margin-top: 20px;
+  margin-top: 24px;
+  max-width: 68ch;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.post header,
+.post-body {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post header {
+  max-width: 68ch;
+}
+
+.post-body p {
+  margin: 0 0 1.2em;
+}
+
+.post-body p:last-child {
+  margin-bottom: 0;
 }
 
 .footer {
@@ -498,7 +525,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   <nav class="nav">
     <a href="/experience/">Experience</a>
     <a href="/blog/">Blog</a>
-    <a href="mailto:hello@example.com">Contact</a>
+    <a href="mailto:doruk.takim.25@ucl.ac.uk">Contact</a>
     <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode">
       <span class="theme-toggle__icon" data-icon="moon" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="img" focusable="false">
@@ -534,7 +561,8 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   </header>
   <div class="post-body">
     <p>I feel like we are living in one of the best times to be alive in human history. It seems that we will have the unique opportunity to (hopefully) see the exponential growth of scientific discovery, and learn about what we are as humans and discover the unknowns of the universe. This also means that the value of human intelligence, which wasn't only one of the biggest factors in a person's career trajectory but also one's 'social worth', is going to plummet. As LLM's get significantly better every few months, it feels to me like everything is moving much faster than I had ever imagined.</p>
-<p>That brings me to my own experience, particularly in computer science. Coding is perhaps the best environment for AI agents to thrive in: it's verifiable, text-based, and very easy to create and train on synthetic data. I distinctly remember, as a child, dreaming that we would one day be able to tell a computer what we want in English, and it would just build the program instead of us having to write tons of code. It was an interesting moment when my software engineer cousin first told me about Copilot writing code from natural language- before I had even heard of GPT's release (note to self that I should trust my childhood imagination and never believe anything is impossible). Since then, we witnessed a crazy amount of progress. I now have five active plans for coding agents: Codex via paid Chatgpt plus; Cursor, Copilot, and Gemini via free student offers, and Claude Code via a generous friend. Of course, using all of these would make me nothing but unproductive, but I do see value in trying different agents because the cutting edge changes so quickly. I do stick, mostly, with Codex, though, and rarely use Claude Code with Opus to supplement. The jump from GPT 5.1-Codex to GPT 5.2-Codex over the holidays was more than enough to convince me to switching back to Codex from Claude Code- sigh, context management.</p>
+<p>That brings me to my own experience, particularly in computer science. Coding is perhaps the best environment for AI agents to thrive in: it's verifiable, text-based, and very easy to create and train on synthetic data. I distinctly remember, as a child, dreaming that we would one day be able to tell a computer what we want in English, and it would just build the program instead of us having to write tons of code. It was an interesting moment when my software engineer cousin first told me about Copilot writing code from natural language- before I had even heard of GPT's release (note to self that I should trust my childhood imagination and never believe anything is impossible).</p>
+<p>Since then, we witnessed a crazy amount of progress. I now have five active plans for coding agents: Codex via paid Chatgpt plus; Cursor, Copilot, and Gemini via free student offers, and Claude Code via a generous friend. Of course, using all of these would make me nothing but unproductive, but I do see value in trying different agents because the cutting edge changes so quickly. I do stick, mostly, with Codex, though, and rarely use Claude Code with Opus to supplement. The jump from GPT 5.1-Codex to GPT 5.2-Codex over the holidays was more than enough to convince me to switching back to Codex from Claude Code- sigh, context management.</p>
 <p>I am due to graduate in 2028, and two-and-a-half years had never seemed this long to me. Agents are already writing code at a level that will take me years to get there, and I simply can't imagine their capabilities in 2028. I know the skepticism, but the rate of improvement is too great imo that I'm very skeptical of the skepticals. I feel that even the views of my professors on capabilities of agents have changed drastically in a few months. We were never told not to use them, but I just feel that they are getting even more certain that we will not be writing code by the time we graduate.</p>
 <p>Enter the dicothomy: the vast majority of my courses, as you'd expect, are simply learning how to code. I have great professors that know an unbeliveable amount of stuff about the behind-the-scenes of programming languages and it's super interesting, but the core cirriculum remains learning to write good code. There's, at least so far, still a lot of value in this. Agent written code requires a lot of reviewing, and you still have to write code in many non-trivial instances- I'm just not sure if that will be the case three years later.</p>
 <p>So I had set myself a simple rule: I write the vast majority of my coursework code by hand, and use coding agents religiously for side projects. This is based on the idea that I will be best suited if I know both what the agent is doing and how to get the most out of these incredibly powerful tools. Even this is starting to lose meaning to me. My professor is talking about the work being done for these agents to target binary code to heavily optimize performance in the near future while teaching us the incredible Java Virtual Machine. I feel like the skills I'm learning will not be relevant in a few years, and I'm not sure if they'll even be called skills.</p>
@@ -611,7 +639,7 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
           }
         })();
 
-        const initialTheme = root.dataset.theme || stored || "dark";
+        const initialTheme = root.dataset.theme || stored || "light";
 
         const applyTheme = (theme, persist) => {
           root.dataset.theme = theme;

@@ -43,6 +43,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/og-image.png": "og-image.png" });
   eleventyConfig.addPassthroughCopy({ "src/og-image.jpg": "og-image.jpg" });
   eleventyConfig.addPassthroughCopy({ "src/og-image-v2.jpg": "og-image-v2.jpg" });
+  eleventyConfig.addPassthroughCopy({ "src/og-image-logo.jpg": "og-image-logo.jpg" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addFilter("date", formatDate);
   eleventyConfig.addFilter("dateLocale", (value, lang) =>

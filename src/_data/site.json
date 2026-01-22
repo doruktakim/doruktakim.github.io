@@ -2,5 +2,10 @@
   "title": "Doruk Takim",
   "description": "Portfolio and writing by Doruk Takim.",
   "url": "https://doruktakim.github.io",
-  "email": "doruk.takim.25@ucl.ac.uk"
+  "email": "doruk.takim.25@ucl.ac.uk",
+  "socialImage": "/og-image-logo.jpg",
+  "socialImageAlt": "Doruk Takim logo on a dark background.",
+  "socialImageType": "image/jpeg",
+  "socialImageWidth": "1200",
+  "socialImageHeight": "630"
 }

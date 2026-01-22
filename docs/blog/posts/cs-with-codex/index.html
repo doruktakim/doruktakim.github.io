@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Building a fast personal site · Doruk Takim</title>
+    <title>Studying CS with Codex by My Side · Doruk Takim</title>
     <meta name="description" content="" />
     <link rel="icon" href="/favicon.ico" />
     <script>
@@ -395,6 +395,49 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
   margin-top: 0;
 }
 
+.post-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.post-summary {
+  margin: 0;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  padding: 0;
+}
+
+.share-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.share-feedback {
+  min-height: 1em;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
 .post-body {
   margin-top: 20px;
 }
@@ -476,22 +519,78 @@ html[data-theme="light"] .theme-toggle__icon[data-icon="sun"] {
       <article class="post">
   <header>
     <p class="post-date">January 21, 2026</p>
-    <h1>Building a fast personal site</h1>
-    <p class="post-summary">Why I kept this site static, tiny, and incredibly quick.</p>
+    <h1>Studying CS with Codex by My Side</h1>
+    <div class="post-summary-row">
+      <p class="post-summary">A reflection on how coding agents are changing the way I think about my degree.</p>
+      <button class="share-button" type="button" data-share-button aria-label="Copy link" title="Copy link">
+        <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+          <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7" />
+          <path d="M16 6l-4-4-4 4" />
+          <path d="M12 2v14" />
+        </svg>
+      </button>
+    </div>
+    <span class="share-feedback" role="status" aria-live="polite" aria-atomic="true" data-share-feedback></span>
   </header>
   <div class="post-body">
-    <p>I wanted this site to feel instant, so I made it static and kept the surface area small. No heavy frameworks, no extra scripts, and just enough CSS to keep the layout clean.</p>
-<p>A few principles I’m following:</p>
-<ul>
-<li>Ship HTML first, then sprinkle enhancements.</li>
-<li>Keep CSS lean and predictable.</li>
-<li>Optimize media before it ever touches the site.</li>
-<li>Avoid unnecessary dependencies.</li>
-</ul>
-<p>The goal is the same every week: publish on schedule without slowing the site down.</p>
+    <p>I feel like we are living in one of the best times to be alive in human history. It seems that we will have the unique opportunity to (hopefully) see the exponential growth of scientific discovery, and learn about what we are as humans and discover the unknowns of the universe. This also means that the value of human intelligence, which wasn't only one of the biggest factors in a person's career trajectory but also one's 'social worth', is going to plummet. As LLM's get significantly better every few months, it feels to me like everything is moving much faster than I had ever imagined.</p>
+<p>That brings me to my own experience, particularly in computer science. Coding is perhaps the best environment for AI agents to thrive in: it's verifiable, text-based, and very easy to create and train on synthetic data. I distinctly remember, as a child, dreaming that we would one day be able to tell a computer what we want in English, and it would just build the program instead of us having to write tons of code. It was an interesting moment when my software engineer cousin first told me about Copilot writing code from natural language- before I had even heard of GPT's release (note to self that I should trust my childhood imagination and never believe anything is impossible). Since then, we witnessed a crazy amount of progress. I now have five active plans for coding agents: Codex via paid Chatgpt plus; Cursor, Copilot, and Gemini via free student offers, and Claude Code via a generous friend. Of course, using all of these would make me nothing but unproductive, but I do see value in trying different agents because the cutting edge changes so quickly. I do stick, mostly, with Codex, though, and rarely use Claude Code with Opus to supplement. The jump from GPT 5.1-Codex to GPT 5.2-Codex over the holidays was more than enough to convince me to switching back to Codex from Claude Code- sigh, context management.</p>
+<p>I am due to graduate in 2028, and two-and-a-half years had never seemed this long to me. Agents are already writing code at a level that will take me years to get there, and I simply can't imagine their capabilities in 2028. I know the skepticism, but the rate of improvement is too great imo that I'm very skeptical of the skepticals. I feel that even the views of my professors on capabilities of agents have changed drastically in a few months. We were never told not to use them, but I just feel that they are getting even more certain that we will not be writing code by the time we graduate.</p>
+<p>Enter the dicothomy: the vast majority of my courses, as you'd expect, are simply learning how to code. I have great professors that know an unbeliveable amount of stuff about the behind-the-scenes of programming languages and it's super interesting, but the core cirriculum remains learning to write good code. There's, at least so far, still a lot of value in this. Agent written code requires a lot of reviewing, and you still have to write code in many non-trivial instances- I'm just not sure if that will be the case three years later.</p>
+<p>So I had set myself a simple rule: I write the vast majority of my coursework code by hand, and use coding agents religiously for side projects. This is based on the idea that I will be best suited if I know both what the agent is doing and how to get the most out of these incredibly powerful tools. Even this is starting to lose meaning to me. My professor is talking about the work being done for these agents to target binary code to heavily optimize performance in the near future while teaching us the incredible Java Virtual Machine. I feel like the skills I'm learning will not be relevant in a few years, and I'm not sure if they'll even be called skills.</p>
+<p>So what do I do? I have no idea. I am worried about unemployment and my future, but the idea that I might be wasting my time on irrelevant skills is a whole lot frightening to me. I love Codex, because it gave me skills that would have taken years and I can now turn my imagination into reality. I also hate Codex, because I don't have the slightest clue what I am doing with my time learning how to write good code.</p>
 
   </div>
 </article>
+<script>
+  (() => {
+    const button = document.querySelector("[data-share-button]");
+    if (!button) return;
+
+    const feedback = document.querySelector("[data-share-feedback]");
+    let timeoutId;
+
+    const setFeedback = (message) => {
+      if (!feedback) return;
+      feedback.textContent = message;
+      if (!message) return;
+      clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(() => {
+        feedback.textContent = "";
+      }, 2000);
+    };
+
+    const fallbackCopy = (text) => {
+      const field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.top = "-9999px";
+      field.style.left = "-9999px";
+      document.body.appendChild(field);
+      field.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(field);
+      return ok;
+    };
+
+    button.addEventListener("click", async () => {
+      const url = window.location.href;
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(url);
+          setFeedback("Link copied to clipboard");
+          return;
+        }
+        if (fallbackCopy(url)) {
+          setFeedback("Link copied to clipboard");
+        }
+      } catch (err) {
+        // Ignore clipboard errors silently for speed.
+      }
+    });
+  })();
+</script>
 
     </main>
     <footer class="footer">

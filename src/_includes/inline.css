@@ -78,12 +78,14 @@ a:hover {
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  color: var(--ink);
 }
 .brand-icon {
   width: 1.35rem;
   height: 1.35rem;
   display: inline-block;
   opacity: 1;
+  color: inherit;
   transition: opacity 0.2s ease, filter 0.2s ease;
 }
 
@@ -93,6 +95,7 @@ a:hover {
   font-size: 0.95rem;
   flex-wrap: wrap;
   align-items: center;
+  color: var(--ink);
 }
 
 .theme-toggle {

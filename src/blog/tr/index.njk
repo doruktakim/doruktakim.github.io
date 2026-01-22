@@ -6,8 +6,16 @@ description: Kisa, haftalik notlar.
 ---
 <section class="page">
   <h1>Blog</h1>
-  <p class="lead">Kisa, haftalik notlar.</p>
-  <a class="text-link" href="/blog/">English posts -></a>
+  <div class="page-row">
+    <p class="lead">Some thoughts.</p>
+    <label class="lang-select" for="blog-lang">
+      <span class="sr-only">Language</span>
+      <select id="blog-lang" name="lang" onchange="window.location.href=this.value">
+        <option value="/blog/">En</option>
+        <option value="/blog/tr/" selected>Tr</option>
+      </select>
+    </label>
+  </div>
 </section>
 
 <section class="posts">

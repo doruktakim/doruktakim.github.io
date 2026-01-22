@@ -33,3 +33,8 @@ tags: [post]
 ---
 Your post here.
 ```
+
+## License
+
+Code is licensed under MIT (see `LICENSE`). Content (writing, posts, media) is licensed
+under CC BY 4.0 (see `CONTENT_LICENSE.md`).

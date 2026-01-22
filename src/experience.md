@@ -53,7 +53,7 @@ title: Experience
               </svg>
             </a>
           </div>
-          <p class="timeline-role">a Voice Controlled Browser Extension that allows users to navigate and interact with the web using natural language.</p>
+          <p class="timeline-role">Voice Controlled Browser Extension that allows users to navigate and interact with the web using natural language.</p>
           <ul class="timeline-details">
             <li>It combines an LLM for translating natural language commands into high-level action plans with lightweight, heuristic-based execution for fast and reliable interactions.</li>
             <li>Browsing is intuitive and blazing fast compared to compute-heavy alternatives like Claude in Chrome, although some performance is naturally sacrificed in return.</li>
@@ -162,7 +162,7 @@ title: Experience
           <ul class="timeline-details">
             <li>Processes emails from Apple Mail instantly with a shortcut.</li>
             <li>Uses Foundation Models to leverage Apple's on-device ML model.</li>
-            <li>Syncs application updates to a Google Sheet intelligently.</li>
+            <li>Syncs application updates to a Google Sheet intelligently, so tracking them with tons of applications is no longer an inconvenience.</li>
           </ul>
           <div class="demo-grid" aria-label="Sheet Sync demos">
             <figure class="demo-card">

@@ -68,11 +68,11 @@ title: Experience
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
                 preload="none"
-                poster="/assets/demos/sheet_sync_1.jpg"
+                poster="/assets/demos/jobFlow-1.jpg"
                 data-lazy="true"
               >
-                <source data-src="/assets/demos/sheet_sync_1.webm" type="video/webm" />
-                <source data-src="/assets/demos/sheet_sync_1.mp4" type="video/mp4" />
+                <source data-src="/assets/demos/jobFlow-1.webm" type="video/webm" />
+                <source data-src="/assets/demos/jobFlow-1.mp4" type="video/mp4" />
               </video>
               <figcaption class="demo-caption">
                 <span class="demo-label">Demo #1</span>
@@ -88,11 +88,11 @@ title: Experience
                 controlslist="nodownload noplaybackrate"
                 disablepictureinpicture
                 preload="none"
-                poster="/assets/demos/sheet_sync_2.jpg"
+                poster="/assets/demos/flowJob-2.jpg"
                 data-lazy="true"
               >
-                <source data-src="/assets/demos/sheet_sync_2.webm" type="video/webm" />
-                <source data-src="/assets/demos/sheet_sync_2.mp4" type="video/mp4" />
+                <source data-src="/assets/demos/flowJob-2.webm" type="video/webm" />
+                <source data-src="/assets/demos/flowJob-2.mp4" type="video/mp4" />
               </video>
               <figcaption class="demo-caption">
                 <span class="demo-label">Demo #2</span>

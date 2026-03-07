@@ -21,7 +21,7 @@ description: Kisa, haftalik notlar.
 <section class="posts">
   {% set posts = collections.post | byLang("tr") | reverse %}
   {% if posts.length == 0 %}
-    <p class="lead">Henuz yazi yok.</p>
+    <p class="lead">Coming soon!</p>
   {% endif %}
   {% for post in posts %}
   <article class="post-card">

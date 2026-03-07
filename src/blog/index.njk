@@ -20,7 +20,7 @@ lang: en
 <section class="posts">
   {% set posts = collections.post | byLang("en") | reverse %}
   {% if posts.length == 0 %}
-    <p class="lead">No posts yet.</p>
+    <p class="lead">Coming soon!</p>
   {% endif %}
   {% for post in posts %}
   <article class="post-card">
